@@ -1,0 +1,29 @@
+//--- SASS Pour le composant Author ---
+.author-card-container {
+    justify-content: right;
+    align-items: center;
+    display: flex;
+
+    h2 {
+        color: rgba(255, 96, 96, 1);
+        font-weight: 500;
+        font-size: clamp(12px, 3vw, 18px);
+        margin: 5px 15px;
+        text-align: right;
+    }
+
+    img {
+        height: clamp(32px, 8vw, 64px);
+        aspect-ratio: 1/1;
+        border-radius: 32px;
+    }
+}
+
+//--- Responsive Pour le composant Author ---
+@media (max-width: 678px) {
+    .author-card-container {
+        h2 {
+            margin: 0 15px;
+        }
+    }
+}

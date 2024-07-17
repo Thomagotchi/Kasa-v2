@@ -1,0 +1,95 @@
+//--- CSS Pour les Cartes Acceuil ---
+.gallery {
+    justify-content: center;
+    display: grid;
+    max-width: 1240px;
+    grid-template-columns: repeat(3, clamp(200px, 30%, 340px));
+    background-color: rgba(246, 246, 246, 1);
+    border-radius: 25px;
+    justify-content: space-between;
+    gap: clamp(20px, 4vw, 55px);
+    padding: clamp(0px, 10vw, 50px);
+    margin: 30px auto;
+
+    .gallery-card {
+        display: grid;
+        grid-template-areas: "pile";
+        aspect-ratio: 1 / 1;
+        border-radius: 10px;
+        overflow: hidden;
+
+        > * {
+            grid-area: pile;
+        }
+
+       .cover-container {
+        height: 100%;
+        z-index: 1;
+        display: flex;
+        
+
+            img {
+                opacity: 1;
+                display: flex;
+                height: 100%;
+                width: 100%;
+                object-fit: cover;
+                background-repeat: no-repeat; 
+            }
+       } 
+
+        .card-title-container {
+            background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 20%, rgba(0, 0, 0, 0.555) 100%);
+            margin-top: auto;
+            display: flex;
+            height: 100%;
+            width: 100%;
+            z-index: 1;
+            transition: opacity 0.5s;
+            
+            .card-title {
+                font-family: 'Montserrat';
+                font-size: 18px;
+                font-weight: 700;
+                color: white;
+                margin: auto 20px 20px 20px;
+            }
+        }
+
+        .card-title-container:hover {
+            opacity: 0.8;
+        }
+    }
+}
+
+//--- Responsive ---
+@media (max-width: 1126px) {
+    .gallery {
+        margin-bottom: 30px;
+        grid-template-columns: repeat(2, 48%);
+        background-color: white;
+        padding: 0px;
+
+        .gallery-card {
+            aspect-ratio: 1 / 0.76 ;
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .gallery {
+        margin-top: 0;
+        margin-bottom: 20px;
+
+        .gallery-card {
+            width: clamp(0px, 100%, 100%);
+        }
+    }
+}
+
+
+@media (max-width: 638px) {
+    .gallery {
+        grid-template-columns: 100%;
+    }
+}

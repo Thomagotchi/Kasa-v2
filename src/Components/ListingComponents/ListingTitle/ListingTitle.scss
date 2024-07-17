@@ -1,0 +1,13 @@
+//--- SASS Pour le composant titre de logement ---
+.listing-title {
+    color: rgba(255, 96, 96, 1);
+    font-size: clamp(18px, 3vw, 36px);
+    font-weight: 500;
+    margin: 0 0 5px 0;
+}
+
+.listing-location {
+    font-size: clamp(14px, 1.5vw, 18px);
+    font-weight: 500;
+    margin: 0;
+}

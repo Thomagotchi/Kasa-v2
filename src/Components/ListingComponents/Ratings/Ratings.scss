@@ -1,0 +1,11 @@
+//--- SASS Pour le composant Ratings ---
+.ratings-container {
+    margin: 0;
+    display: flex;
+    list-style: none;
+    gap: 8px;
+
+    img {
+        height: clamp(13px, 3vw, 24px);
+    }
+}

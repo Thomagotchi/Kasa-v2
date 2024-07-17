@@ -1,0 +1,39 @@
+//--- SASS Pour le Header ---
+.header {
+    display: flex;
+    max-width: 1240px;
+    width: calc(100% - 40px);
+    padding: 0 20px;
+    margin: clamp(20px, 3%, 30px) auto 0 auto;
+    justify-content: space-between;
+    flex-direction: row;
+
+    img {
+        object-fit: cover;
+        width: clamp(145px, 30%, 210px);
+    }
+   
+    .nav-menu {
+        font-family: 'Montserrat';
+        font-weight: 500;
+        font-size: clamp(12px, 2.6vmin, 24px);
+        align-items: center;
+        display: flex;
+        gap: 5vw;
+
+        .active {
+            text-decoration: underline;
+            text-decoration-skip-ink: none;
+            padding-bottom: 0;
+        }
+    }
+}
+
+//--- Responsive Pour le Header ---
+@media (max-width: 768px) {
+    .nav-menu {
+        a {
+            text-transform: uppercase;
+        }
+    }
+}
